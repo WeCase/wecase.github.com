@@ -61,28 +61,43 @@
 	    <hr/>
 
 	    <div class="row-fluid">
-	    	<div class="span7 border">
-	    	  <h2>安装指南</h2>
-	    	  <br /><br />
-	    	  <h3>依赖</h3>
-	    	  <li>Python 3</li>
-	    	  <li>PyQt4 (python3-pyqt, python3-qt4)</li>
-	    	  <li>Python-notify2 (python3-notify2)</li>
-	    	  <li>Python-requests (python3-requests)</li>
-	    	  <br />
-	    	  <h3>安装步骤</h3>
-	    	  <p>1. 安装WeCase所需要的依赖。</p>
-	    	  <p>2. 解压下载好的压缩包或者用 git clone </p>
-	    	  <blockquote>git clone git://github.com/WeCase/WeCase.git</blockquote>
-	    	  <p>3. 进入WeCase 源码的文件夹，文件夹的名字根据实际情况而定</p>
-	    	  <blockquote>cd WeCase</blockquote>
-	    	  <p>4. 取得 新浪微博的 sdk</p>
-	    	  <blockquote>git submodule init; git submodule update</blockquote>
-	    	  <p>5. 安装sdk，如果没有sudo 的话，需要root权限</p>
-	    	  <blockquote>cd sdk; sudo python3 setup.py install</blockquote>
-	    	  <p>6. 在源码的根目录下运行</p>
-	    	  <blockquote>python3 ./src/wecase.py</blockquote>
-  	        </div>
+            <div class="span7 border">
+                <h3 class="callout"><a href="http://www.archlinux.org"><img class="logo" src="img/arch.png" alt=""></a> Arch Linux</h3>
+                <pre># yaourt -S mosh</pre>
+
+                <br />
+
+                <h3 class="callout"><a href="http://www.fedoraproject.org"><img class="logo" src="img/fedora.png" alt=""></a> Fedora <small>18 & 19</small></h3>
+                <pre>$ sudo su -c "wget -O- http://download.opensuse.org/repositories/home:/biergaizi/Fedora_$(rpm -E %fedora)/home:biergaizi.repo &gt; /etc/yum.repos.d/wecase.repo"<br />$ sudo yum install WeCase</pre>
+
+                <br />
+
+                <h3 class="callout"><a href="http://www.gentoo.org"><img class="logo" src="img/gentoo.png" alt=""></a> Gentoo</h3>
+                <pre># layman -a gentoo-zh <br /># emerge net-misc/WeCase </pre>
+
+                <br />
+
+              <h2>源码安装指南</h2>
+              <br /><br />
+              <h3>依赖</h3>
+              <li>Python 3</li>
+              <li>PyQt4 (python3-pyqt, python3-qt4)</li>
+              <li>Python-notify2 (python3-notify2)</li>
+              <br />
+              <h3>安装步骤</h3>
+              <p>1. 安装WeCase所需要的依赖。</p>
+              <p>2. 解压下载好的压缩包或者用 git clone </p>
+              <pre>git clone git://github.com/WeCase/WeCase.git</pre>
+              <p>3. 进入WeCase 源码的文件夹，文件夹的名字根据实际情况而定</p>
+              <pre>cd WeCase</pre>
+              <p>4. 取得 新浪微博的 sdk</p>
+              <pre>git submodule init; git submodule update</pre>
+              <p>5. 安装sdk，如果没有sudo 的话，需要root权限</p>
+              <pre>cd sdk; sudo python3 setup.py install</pre>
+              <p>6. 在源码的根目录下运行</p>
+              <pre>python3 ./src/wecase.py</pre>
+
+            </div>
 			<div class="span1"></div><!--起到间隔的作用-->
 	       	<div class="span4 border">
 	    		<h2>公告</h2>
