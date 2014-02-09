@@ -89,18 +89,24 @@
               <li>PyQt4 (python3-pyqt, python3-qt4)</li>
               <li>Python-notify2 (python3-notify2)</li>
               <br />
+              <p><b>注意：</b>不同的发行版可能使用不同的软件包名称，或者在软件库中找不到<code>python-notify2</code>。我们将会创建这些依赖的<code>.rpm</code>以及<code>.deb</code>包，在此之前，请用 PIP 安装。</p>
+              <br />
               <h3>安装步骤</h3>
               <p>1. 安装WeCase所需要的依赖。</p>
               <p>2. 解压下载好的压缩包或者用 git clone </p>
-              <pre>git clone git://github.com/WeCase/WeCase.git</pre>
-              <p>3. 进入WeCase 源码的文件夹，文件夹的名字根据实际情况而定</p>
-              <pre>cd WeCase</pre>
-              <p>4. 取得 新浪微博的 sdk</p>
-              <pre>git submodule init; git submodule update</pre>
-              <p>5. 安装sdk，如果没有 sudo 的话，需要root权限</p>
-              <pre>cd sdk; sudo python3 setup.py install</pre>
-              <p>6. 在源码的根目录下运行</p>
-              <pre>python3 ./src/wecase.py</pre>
+              <pre>git clone --recursive git://github.com/WeCase/WeCase.git</pre>
+              <p>3. 安装 SDK</p>
+              <pre>cd WeCase/sdk</pre>
+              <pre>sudo python3 setup.py install</pre>
+              <pre>cd ..</pre>
+              <p>4. 安装 WeCase</p>
+              <pre>mkdir build</pre>
+              <pre>cd build</pre>
+              <pre>../configure</pre>
+              <pre>make</pre>
+              <pre>sudo make install</pre>
+              <p>5. 运行 WeCase</p>
+              <pre>wecase</pre>
 
             </div>
             <div class="span1"></div><!--起到间隔的作用-->
