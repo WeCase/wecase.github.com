@@ -88,7 +88,9 @@
               <li>Python 3</li>
               <li>PyQt4 (python3-pyqt, python3-qt4)</li>
               <li>（可选）Python-notify2 (python3-notify2)</li>
-              <li>(Debian 用户) pyqt4-dev-tools qt4-linguist-tools </li>
+              <li>PyQt / Qt 开发工具包，不同的发行版名字不同，例如 Debian 用户的是 pyqt4-dev-tools qt4-linguist-tools </li>
+              <li>make</li>
+              <li>automake</li>
               <br />
               <p><b>注意：</b>不同的发行版可能使用不同的软件包名称，或者在软件库中找不到<code>python-notify2</code>。我们将会创建这些依赖的<code>.rpm</code>以及<code>.deb</code>包，在此之前，请用 PIP 安装。</p>
               <br />
@@ -101,6 +103,7 @@
               <pre>sudo python3 setup.py install</pre>
               <pre>cd ..</pre>
               <p>4. 安装 WeCase</p>
+              <pre>./bootstrap.sh</pre>
               <pre>mkdir build</pre>
               <pre>cd build</pre>
               <pre>../configure</pre>
