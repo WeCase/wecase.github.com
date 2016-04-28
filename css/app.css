@@ -1,0 +1,4 @@
+/* cause there is no semantic name of elements, have to use this type of selector here */
+nav.top-bar, nav.top-bar ul {background-color: transparent;}
+.row.column:last-of-type {margin-bottom: 12px;}
+@media screen and (max-width: 600px){.callout.large .media-object.column {width: 100%;}}
